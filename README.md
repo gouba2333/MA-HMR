@@ -16,7 +16,7 @@ We propose Metric-Aware HMR, an end-to-end network that directly estimates human
 </p> -->
 
 
-## Installation
+## ⚙️ Installation
 
 We follow [SAT-HMR](https://github.com/ChiSu001/SAT-HMR), testing with python 3.11, PyTorch 2.4.1 and CUDA 12.1.
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 4. You may need to modify `chumpy` package to avoid errors. For detailed instructions, please check [this guidance](https://github.com/ChiSu001/SAT-HMR/blob/main/docs/fix_chumpy.md).
 
-## Download Models & Weights
+## 📦 Download Models & Weights
 
 1. Download SMPL-related weights and place them in `weights/smpl_data/smpl/`. Partially Available at [this link](https://drive.google.com/drive/folders/1C8fZNiiZfC1oMUZq7xNilQcGv4LJf5M8?usp=drive_link). You need to register on the [SMPL website](https://smpl.is.tue.mpg.de/) to get other part of them.
 
@@ -89,7 +89,7 @@ weights
 ```
 
 
-## Data Preparation
+## 📦 Data Preparation
 
 Please follow [this guidance](https://github.com/ChiSu001/SAT-HMR/blob/main/docs/data_preparation.md) to prepare AGORA, BEDLAM, 3DPW. Placing all datasets in `data/`. The `*_CHMR_SMPL.npz` files are the reorgnized [CameraHMR's](https://camerahmr.is.tue.mpg.de/) annotation of 4D-humans dataset. The `*_CHMR_SMPL_OPT.npz` files are our [DTO-Humans](https://github.com/gouba2333/DTO-Humans.git) annotations.
  You can skip this step if you are not going to train or evaluate MA-HMR.
@@ -129,7 +129,7 @@ data/
 ```
 
 
-## Inference on Images
+## ▶️ Inference on Images
 <h4> Inference with 1 GPU</h4>
 
 We provide some demo images in `demo/`. You can run MA-HMR on all images on a single GPU via:
@@ -162,7 +162,7 @@ Then run:
 accelerate launch main.py --mode infer --cfg demo
 ```
 
-## Training
+## 🔧 Training
 
 <h4> Training with Multiple GPUs</h4>
 
@@ -196,7 +196,7 @@ You can monitor the training progress using TensorBoard. To start TensorBoard, r
 tensorboard --logdir=${Project}/outputs/logs
 ```
 
-## Evaluation
+## 📊 Evaluation
 
 <h4> Evaluation with 1 GPU</h4>
 
